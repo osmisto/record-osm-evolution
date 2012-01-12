@@ -1,0 +1,10 @@
+#!/usr/bin/env ruby
+
+log_file = 'all.log'
+
+`echo "------------" $(date) "-------------" >>#{log_file}`
+
+Dir['**/rakefile'].each do |f|
+  dir = File.dirname(f)
+  `(cd #{dir}; rake 2>&1) >>#{log_file}`
+end
