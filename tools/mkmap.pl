@@ -25,8 +25,8 @@ defined $zoom && defined $bbox && defined $file
     or usage();
 
 unless ( scalar @$urls ) {
-	$urls = [ 'http://c.tile.openstreetmap.org/!z/!x/!y.png',
-	          'http://b.tile.openstreetmap.org/!z/!x/!y.png',
+	$urls = [ 'http://b.tile.openstreetmap.org/!z/!x/!y.png',
+	          'http://c.tile.openstreetmap.org/!z/!x/!y.png',
 	          'http://a.tile.openstreetmap.org/!z/!x/!y.png' ]
 }
 
