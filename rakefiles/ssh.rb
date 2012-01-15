@@ -1,9 +1,9 @@
 
-SSH_TARGET ||= File.expand_path("~/Dropbox/Public")
+SSH_TARGET ||= "?"
 
-namespace :ssh
-  desc "Upliad final gif using SSH"
-  task :upload => [GIF] do
+namespace :ssh do
+  desc "Upload final gif using SSH"
+  task :publicate => [GIF] do
     sh "scp #{GIF} #{SSH_TARGET}"
   end
 end
